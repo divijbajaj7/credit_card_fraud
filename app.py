@@ -19,7 +19,6 @@ submit = st.button("Submit")
 
 if submit:
     model = joblib.load('model_rf_joblib.pkl')
-    ## model = pickle.load(open('model_rf.pkl', 'rb'))
     features = np.asarray(input_df_split,dtype = np.float64)
     prediction = model.predict(features.reshape(1,-1))
 
